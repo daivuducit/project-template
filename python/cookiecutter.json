@@ -1,0 +1,13 @@
+{
+    "full_name": "Enter your full name",
+    "email": "your.email@example.com",
+    "github_username": "your-github-handle",
+    "project_name": "Project Name",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "pkg_name": "{{ cookiecutter.project_slug }}",
+    "project_short_description": "A concise description of what this project does.",
+    "version": "0.1.0",
+    "python_version": "3.12",
+    "license": ["MIT", "BSD-3", "Proprietary"],
+    "use_docker": ["n", "y"]
+}
