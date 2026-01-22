@@ -1,0 +1,45 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "mvn: package (war)",
+      "type": "shell",
+      "command": "mvn -q clean package",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "build + deploy to tomcat",
+      "type": "shell",
+      "command": "echo Deploying WAR...",
+      "windows": {
+        "command": "powershell",
+        "args": [
+          "-NoProfile",
+          "-ExecutionPolicy",
+          "Bypass",
+          "-File",
+          // "mvn clean package; Copy-Item -Force \"${workspaceFolder}\\target\\*.war\" \"C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\""
+          "${workspaceFolder}\\.vscode\\build_and_deploy.ps1",
+          "-workspaceFolder",
+          "${workspaceFolder}"
+        ]
+      },
+      "linux": {
+        "command": "bash",
+        "args": [
+          "-lc",
+          "cp -f \"${workspaceFolder}/target\"/*.war \"/path/to/tomcat/webapps/\""
+        ]
+      },
+      "osx": {
+        "command": "bash",
+        "args": [
+          "-lc",
+          "cp -f \"${workspaceFolder}/target\"/*.war \"/path/to/tomcat/webapps/\""
+        ]
+      },
+      "problemMatcher": []
+    }
+  ]
+}
