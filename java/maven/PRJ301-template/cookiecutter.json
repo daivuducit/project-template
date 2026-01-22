@@ -1,0 +1,11 @@
+{
+    "project_name": "PRJ301",
+    "group_id": "com.mycompany",
+    "main_servlet_name": "NewServlet",
+    "context_path": "PRJ301",
+
+    "project_slug": "{{ cookiecutter.project_name | lower() | replace(' ', '_') }}",
+    "group_id_path": "{{ cookiecutter.group_id | replace('.', '/') }}",
+    "artifact_id": "{{ cookiecutter.project_slug }}",
+    "context_path_slug": "{{ cookiecutter.context_path | lower() | replace(' ', '_') }}"
+}
