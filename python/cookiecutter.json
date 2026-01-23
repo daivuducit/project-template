@@ -7,7 +7,8 @@
     "pkg_name": "{{ cookiecutter.project_slug }}",
     "project_short_description": "A concise description of what this project does.",
     "version": "0.1.0",
-    "python_version": "3.12",
+    "actual_python_path": "python",
+    "python_version": "3.14",
     "license": ["MIT", "BSD-3", "Proprietary"],
     "use_docker": ["n", "y"]
 }

@@ -23,6 +23,7 @@ $ source .venv/bin/activate
 ### 3. Install Dependencies
 $ pip install -e ".[dev]"
 
+> **Note:** After creating the `.venv`, VS Code should automatically detect the Python interpreter. If not, press `Ctrl+Shift+P` -> `Python: Select Interpreter` and choose the one inside `.venv`.
 ## 💻 Development Workflow
 
 ### Linting & Formatting
