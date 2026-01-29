@@ -1,5 +1,7 @@
 {
   "project_name": "my-project",
+  "author": "Your Name",
+  "github_username": "your-github",
   "main_filename": "Main",
   "build_system": ["Gradle - Groovy", "Gradle - Kotlin", "Maven"],
   "java_version": ["17", "21", "11", "8"],
