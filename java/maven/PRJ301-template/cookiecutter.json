@@ -12,7 +12,6 @@
   "project_slug": "{{ cookiecutter.project_name | lower() | replace(' ', '-') | replace('_', '-') }}",
   "artifact_id": "{{ cookiecutter.project_slug }}",
   "group_id": "com.example",
-  "context_path": "PRJ301",
   "group_id_path": "{{ cookiecutter.group_id.replace('.', '/') }}",
   "jdk_version": "{{ cookiecutter.java_version }}"
 }
