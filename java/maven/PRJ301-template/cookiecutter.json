@@ -1,17 +1,11 @@
 {
-  "project_name": "my-web-project",
-  "author": "Your Name",
-  "github_username": "your-github",
-  "application_server": ["Tomcat", "Glassfish", "Wildfly"],
-  "build_system": ["Maven", "Gradle - Groovy"],
-  "java_version": ["17", "21", "11", "8"],
-  "database": ["MySQL", "PostgreSQL", "SQLServer", "None"],
-  "mvc_pattern": ["MVC2", "MVC1"],
-  "include_jstl": ["y", "n"],
-  "main_servlet_name": "MainServlet",
-  "project_slug": "{{ cookiecutter.project_name | lower() | replace(' ', '-') | replace('_', '-') }}",
+  "project_name": "PRJ301",
+  "group_id": "com.mycompany",
+  "main_servlet_name": "NewServlet",
+  "context_path": "PRJ301",
+
+  "project_slug": "{{ cookiecutter.project_name | lower() | replace(' ', '_') }}",
+  "group_id_path": "{{ cookiecutter.group_id | replace('.', '/') }}",
   "artifact_id": "{{ cookiecutter.project_slug }}",
-  "group_id": "com.example",
-  "group_id_path": "{{ cookiecutter.group_id.replace('.', '/') }}",
-  "jdk_version": "{{ cookiecutter.java_version }}"
+  "context_path_slug": "{{ cookiecutter.context_path | lower() | replace(' ', '_') }}"
 }
