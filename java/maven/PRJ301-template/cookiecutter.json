@@ -4,7 +4,7 @@
     "main_servlet_name": "NewServlet",
     "context_path": "PRJ301",
 
-    "project_slug": "{{ cookiecutter.project_name | lower() | replace(' ', '_') }}",
+    "project_slug": "{{ cookiecutter.project_name | lower() | replace(' ', '_') | replace('-', '_')}}",
     "group_id_path": "{{ cookiecutter.group_id | replace('.', '/') }}",
     "artifact_id": "{{ cookiecutter.project_slug }}",
     "context_path_slug": "{{ cookiecutter.context_path | lower() | replace(' ', '_') }}"
