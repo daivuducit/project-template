@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="{{ cookiecutter.project_name }}" default="dist" basedir=".">
+    <description>
+        Ant build file for {{ cookiecutter.project_name }} (PRJ301 - Servlet/JSP)
+    </description>
+
+    <!-- Global Properties -->
+    <property name="src" location="src"/>
+    <property name="web" location="web"/>
+    <property name="build" location="build"/>
+    <property name="dist" location="dist"/>
+    <property name="lib" location="lib"/>
+    <property name="web-inf" value="${web}/WEB-INF"/>
+    <property name="classes" value="${web-inf}/classes"/>
+    <property name="war.file" value="${dist}/${ant.project.name}.war"/>
+
+    <!-- Path for compilation -->
+    <path id="compile.classpath">
+        <fileset dir="${lib}" includes="*.jar"/>
+        <!-- Tomcat libraries usually needed, user needs to configure them -->
+    </path>
+
+    <!-- Initialization -->
+    <target name="init">
+        <tstamp/>
+        <mkdir dir="${build}"/>
+        <mkdir dir="${dist}"/>
+        <mkdir dir="${classes}"/>
+    </target>
+
+    <!-- Compilation -->
+    <target name="compile" depends="init" description="compile the source">
+        <javac srcdir="${src}" destdir="${classes}" includeantruntime="false">
+            <classpath refid="compile.classpath"/>
+        </javac>
+    </target>
+
+    <!-- Packaging (WAR) -->
+    <target name="dist" depends="compile" description="generate the distribution">
+        <war destfile="${war.file}" webxml="${web-inf}/web.xml">
+            <fileset dir="${web}"/>
+            <classes dir="${classes}"/>
+        </war>
+    </target>
+
+    <!-- Clean -->
+    <target name="clean" description="clean up">
+        <delete dir="${build}"/>
+        <delete dir="${dist}"/>
+        <delete dir="${classes}"/>
+    </target>
+</project>

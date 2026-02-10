@@ -1,0 +1,10 @@
+{
+  "project_name": "my-project",
+  "group_id": "com.example",
+  "main_filename": "Main",
+  "author": "Your Name",
+  "github_username": "your-github",
+  "build_system": "Ant",
+  "project_slug": "{{ cookiecutter.project_name | lower() | replace(' ', '-') | replace('_', '-') }}",
+  "group_id_path": "{{ cookiecutter.group_id.replace('.', '/') }}"
+}
