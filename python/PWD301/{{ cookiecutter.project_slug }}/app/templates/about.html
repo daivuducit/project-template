@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}About - {{ cookiecutter.project_name }}{% endblock %}
+
+{% block content %}
+<h1>About</h1>
+<p class="lead">This is a Flask template project with modern architecture.</p>
+
+<h2 class="mt-4">Features</h2>
+<ul>
+    <li>Application Factory Pattern</li>
+    <li>Blueprint Architecture</li>
+    <li>Bootstrap 5 UI</li>
+    <li>Environment Configuration</li>
+    <li>API Endpoints</li>
+</ul>
+
+<h2 class="mt-4">Technology Stack</h2>
+<ul>
+    <li>Flask {{ config.APP_VERSION }}</li>
+    <li>Python {{ cookiecutter.python_version }}</li>
+    <li>Bootstrap 5</li>
+    <li>Jinja2 Templates</li>
+</ul>
+{% endblock %}

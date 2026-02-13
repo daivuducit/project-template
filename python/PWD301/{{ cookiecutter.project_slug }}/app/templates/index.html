@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Home - {{ cookiecutter.project_name }}{% endblock %}
+
+{% block content %}
+<div class="text-center my-5">
+    <h1>Welcome to {{ cookiecutter.project_name }}</h1>
+    <p class="lead">{{ cookiecutter.project_short_description }}</p>
+    <hr class="my-4">
+    <p>This is a Flask application using the Application Factory pattern with Blueprints.</p>
+    <a href="{{ url_for('main.about') }}" class="btn btn-primary">Learn More</a>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <h3>Routes</h3>
+        <p>Organized using Flask Blueprints for better code structure.</p>
+    </div>
+    <div class="col-md-4">
+        <h3>Templates</h3>
+        <p>Using Jinja2 with template inheritance for consistent layouts.</p>
+    </div>
+    <div class="col-md-4">
+        <h3>API Ready</h3>
+        <p>Sample API endpoints at <a href="{{ url_for('main.api_users') }}">/api/users</a></p>
+    </div>
+</div>
+{% endblock %}
